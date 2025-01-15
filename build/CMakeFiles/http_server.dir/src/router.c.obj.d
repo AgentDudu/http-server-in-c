@@ -1,7 +1,5 @@
-CMakeFiles/http_server.dir/src/server.c.obj: \
- D:\NeovimProjects\http_server\src\server.c \
- D:\NeovimProjects\http_server\src\server.h \
- D:\NeovimProjects\http_server\src\request.h \
+CMakeFiles/http_server.dir/src/router.c.obj: \
+ D:\NeovimProjects\http_server\src\router.c \
  D:\NeovimProjects\http_server\src\router.h c:\mingw\include\winsock2.h \
  c:\mingw\include\winsock.h c:\mingw\include\windows.h \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\stdarg.h \
@@ -36,5 +34,5 @@ CMakeFiles/http_server.dir/src/server.c.obj: \
  c:\mingw\include\oleauto.h c:\mingw\include\oaidl.h \
  c:\mingw\include\oleidl.h c:\mingw\include\sys\bsdtypes.h \
  c:\mingw\include\sys\time.h c:\mingw\include\nspapi.h \
- c:\mingw\include\wtypes.h c:\mingw\include\stdio.h \
- c:\mingw\include\sys/types.h
+ c:\mingw\include\wtypes.h D:\NeovimProjects\http_server\src\request.h \
+ c:\mingw\include\stdio.h c:\mingw\include\sys/types.h

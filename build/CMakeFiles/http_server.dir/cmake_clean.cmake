@@ -1,6 +1,10 @@
 file(REMOVE_RECURSE
   "CMakeFiles/http_server.dir/src/main.c.obj"
   "CMakeFiles/http_server.dir/src/main.c.obj.d"
+  "CMakeFiles/http_server.dir/src/request.c.obj"
+  "CMakeFiles/http_server.dir/src/request.c.obj.d"
+  "CMakeFiles/http_server.dir/src/router.c.obj"
+  "CMakeFiles/http_server.dir/src/router.c.obj.d"
   "CMakeFiles/http_server.dir/src/server.c.obj"
   "CMakeFiles/http_server.dir/src/server.c.obj.d"
   "http_server.exe"

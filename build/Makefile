@@ -152,6 +152,54 @@ src/main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\http_server.dir\build.make CMakeFiles/http_server.dir/src/main.c.s
 .PHONY : src/main.c.s
 
+src/request.obj: src/request.c.obj
+.PHONY : src/request.obj
+
+# target to build an object file
+src/request.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\http_server.dir\build.make CMakeFiles/http_server.dir/src/request.c.obj
+.PHONY : src/request.c.obj
+
+src/request.i: src/request.c.i
+.PHONY : src/request.i
+
+# target to preprocess a source file
+src/request.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\http_server.dir\build.make CMakeFiles/http_server.dir/src/request.c.i
+.PHONY : src/request.c.i
+
+src/request.s: src/request.c.s
+.PHONY : src/request.s
+
+# target to generate assembly for a file
+src/request.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\http_server.dir\build.make CMakeFiles/http_server.dir/src/request.c.s
+.PHONY : src/request.c.s
+
+src/router.obj: src/router.c.obj
+.PHONY : src/router.obj
+
+# target to build an object file
+src/router.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\http_server.dir\build.make CMakeFiles/http_server.dir/src/router.c.obj
+.PHONY : src/router.c.obj
+
+src/router.i: src/router.c.i
+.PHONY : src/router.i
+
+# target to preprocess a source file
+src/router.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\http_server.dir\build.make CMakeFiles/http_server.dir/src/router.c.i
+.PHONY : src/router.c.i
+
+src/router.s: src/router.c.s
+.PHONY : src/router.s
+
+# target to generate assembly for a file
+src/router.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\http_server.dir\build.make CMakeFiles/http_server.dir/src/router.c.s
+.PHONY : src/router.c.s
+
 src/server.obj: src/server.c.obj
 .PHONY : src/server.obj
 
@@ -188,6 +236,12 @@ help:
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s
+	@echo ... src/request.obj
+	@echo ... src/request.i
+	@echo ... src/request.s
+	@echo ... src/router.obj
+	@echo ... src/router.i
+	@echo ... src/router.s
 	@echo ... src/server.obj
 	@echo ... src/server.i
 	@echo ... src/server.s
