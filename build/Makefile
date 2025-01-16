@@ -224,6 +224,30 @@ src/server.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\http_server.dir\build.make CMakeFiles/http_server.dir/src/server.c.s
 .PHONY : src/server.c.s
 
+src/static_handler.obj: src/static_handler.c.obj
+.PHONY : src/static_handler.obj
+
+# target to build an object file
+src/static_handler.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\http_server.dir\build.make CMakeFiles/http_server.dir/src/static_handler.c.obj
+.PHONY : src/static_handler.c.obj
+
+src/static_handler.i: src/static_handler.c.i
+.PHONY : src/static_handler.i
+
+# target to preprocess a source file
+src/static_handler.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\http_server.dir\build.make CMakeFiles/http_server.dir/src/static_handler.c.i
+.PHONY : src/static_handler.c.i
+
+src/static_handler.s: src/static_handler.c.s
+.PHONY : src/static_handler.s
+
+# target to generate assembly for a file
+src/static_handler.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\http_server.dir\build.make CMakeFiles/http_server.dir/src/static_handler.c.s
+.PHONY : src/static_handler.c.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -245,6 +269,9 @@ help:
 	@echo ... src/server.obj
 	@echo ... src/server.i
 	@echo ... src/server.s
+	@echo ... src/static_handler.obj
+	@echo ... src/static_handler.i
+	@echo ... src/static_handler.s
 .PHONY : help
 
 

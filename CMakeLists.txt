@@ -10,6 +10,7 @@ add_executable(http_server
     src/server.c
     src/request.c
     src/router.c
+    src/static_handler.c
 )
 
 target_link_libraries(http_server ws2_32)

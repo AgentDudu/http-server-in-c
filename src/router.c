@@ -1,5 +1,6 @@
 #include "router.h"
 #include "request.h"
+#include "static_handler.h"
 #include <stdio.h>
 #include <string.h>
 #include <winsock2.h>
@@ -24,23 +25,34 @@ void handle_request(const char *request, SOCKET client_socket) {
 
     if (strcmp(url, "/") == 0) {
         snprintf(body, sizeof(body), "Hello World");
+        body_length = strlen(body);
+        snprintf(response, sizeof(response),
+                 "HTTP/1.1 200 OK\r\n"
+                 "Content-Type: text/plain\r\n"
+                 "Content-Length: %d\r\n"
+                 "Connection: close\r\n"
+                 "\r\n"
+                 "%s",
+                 body_length, body);
+        log_response(response);
+        send(client_socket, response, strlen(response), 0);
     } else if (strcmp(url, "/about") == 0) {
         snprintf(body, sizeof(body), "About Page");
+        body_length = strlen(body);
+        snprintf(response, sizeof(response),
+                 "HTTP/1.1 200 OK\r\n"
+                 "Content-Type: text/plain\r\n"
+                 "Content-Length: %d\r\n"
+                 "Connection: close\r\n"
+                 "\r\n"
+                 "%s",
+                 body_length, body);
+        log_response(response);
+        send(client_socket, response, strlen(response), 0);
     } else {
-        snprintf(body, sizeof(body), "Not Found");
+        serve_static_file(url, client_socket);
     }
 
-    body_length = strlen(body);
-
-    snprintf(response, sizeof(response),
-             "HTTP/1.1 200 OK\r\n"
-             "Content-Type: text/plain\r\n"
-             "Content-Length: %d\r\n"
-             "\r\n"
-             "%s",
-             body_length, body);
-
-    log_response(response);
-
-    send(client_socket, response, strlen(response), 0);
+    shutdown(client_socket, SD_SEND);
+    closesocket(client_socket);
 }

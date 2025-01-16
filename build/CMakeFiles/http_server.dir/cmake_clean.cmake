@@ -7,6 +7,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/http_server.dir/src/router.c.obj.d"
   "CMakeFiles/http_server.dir/src/server.c.obj"
   "CMakeFiles/http_server.dir/src/server.c.obj.d"
+  "CMakeFiles/http_server.dir/src/static_handler.c.obj"
+  "CMakeFiles/http_server.dir/src/static_handler.c.obj.d"
   "http_server.exe"
   "http_server.exe.manifest"
   "http_server.pdb"

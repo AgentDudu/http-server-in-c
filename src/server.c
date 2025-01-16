@@ -53,7 +53,12 @@ void start_server(int port) {
     recv_len = recv(client_socket, buffer, sizeof(buffer), 0);
     if (recv_len > 0) {
       buffer[recv_len] = '\0';
+      printf("Received Request:\n%s\n", buffer);
       handle_request(buffer, client_socket);
+    } else if (recv_len == 0) {
+      printf("Client disconnected gracefully.\n");
+    } else {
+      printf("Error in recv: %d\n", WSAGetLastError());
     }
 
     closesocket(client_socket);
