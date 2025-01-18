@@ -3,3 +3,7 @@
 [2025-01-18 17:24:08] [ERROR] File not found: static/favicon.ico
 [2025-01-18 17:24:22] [INFO] Request: Method=GET, URL=/nonexistent.html
 [2025-01-18 17:24:22] [ERROR] File not found: static/nonexistent.html
+[2025-01-18 17:27:32] [INFO] Request: Method=GET, URL=/
+[2025-01-18 17:27:43] [INFO] Request: Method=GET, URL=/
+[2025-01-18 17:27:52] [INFO] Request: Method=GET, URL=/about.html
+[2025-01-18 17:27:52] [INFO] Request: Method=GET, URL=/styles.css
