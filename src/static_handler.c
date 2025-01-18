@@ -1,4 +1,5 @@
 #include "static_handler.h"
+#include "logger.h"
 #include <stdio.h>
 #include <string.h>
 #include <sys/stat.h>
@@ -15,6 +16,10 @@ void serve_static_file(const char *url, SOCKET client_socket) {
     snprintf(path, sizeof(path), "static%s", strcmp(url, "/") == 0 ? "/index.html" : url);
 
     if (stat(path, &st) != 0 || (file = fopen(path, "rb")) == NULL) {
+        char error_message[512];
+        snprintf(error_message, sizeof(error_message), "File not found: %s", path);
+        log_error(error_message);
+
         snprintf(body, sizeof(body), "Not Found");
         body_length = strlen(body);
         snprintf(response, sizeof(response),

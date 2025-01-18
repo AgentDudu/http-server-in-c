@@ -128,6 +128,30 @@ http_server/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\http_server.dir\build.make CMakeFiles/http_server.dir/build
 .PHONY : http_server/fast
 
+src/logger.obj: src/logger.c.obj
+.PHONY : src/logger.obj
+
+# target to build an object file
+src/logger.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\http_server.dir\build.make CMakeFiles/http_server.dir/src/logger.c.obj
+.PHONY : src/logger.c.obj
+
+src/logger.i: src/logger.c.i
+.PHONY : src/logger.i
+
+# target to preprocess a source file
+src/logger.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\http_server.dir\build.make CMakeFiles/http_server.dir/src/logger.c.i
+.PHONY : src/logger.c.i
+
+src/logger.s: src/logger.c.s
+.PHONY : src/logger.s
+
+# target to generate assembly for a file
+src/logger.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\http_server.dir\build.make CMakeFiles/http_server.dir/src/logger.c.s
+.PHONY : src/logger.c.s
+
 src/main.obj: src/main.c.obj
 .PHONY : src/main.obj
 
@@ -257,6 +281,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... http_server
+	@echo ... src/logger.obj
+	@echo ... src/logger.i
+	@echo ... src/logger.s
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s

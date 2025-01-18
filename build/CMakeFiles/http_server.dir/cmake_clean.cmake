@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/http_server.dir/src/logger.c.obj"
+  "CMakeFiles/http_server.dir/src/logger.c.obj.d"
   "CMakeFiles/http_server.dir/src/main.c.obj"
   "CMakeFiles/http_server.dir/src/main.c.obj.d"
   "CMakeFiles/http_server.dir/src/request.c.obj"
