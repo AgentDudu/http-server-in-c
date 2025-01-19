@@ -7,12 +7,50 @@
 #include <winsock2.h>
 
 void handle_request(const char *request, SOCKET client_socket) {
-    char method[16] = {0}, url[256] = {0};
+    char method[16] = {0}, url[256] = {0}, protocol[16] = {0};
     char response[2048] = {0};
     char body[1024] = {0};
     int body_length;
 
-    parse_request(request, method, url);
+    if (sscanf(request, "%15s %255s %15s", method, url, protocol) != 3) {
+        log_error("Malformed HTTP request.");
+        snprintf(response, sizeof(response),
+                 "HTTP/1.1 400 Bad Request\r\n"
+                 "Content-Type: text/plain\r\n"
+                 "Content-Length: 11\r\n"
+                 "Connection: close\r\n"
+                 "\r\n"
+                 "Bad Request");
+        send(client_socket, response, strlen(response), 0);
+        return;
+    }
+
+    if (strcmp(protocol, "HTTP/1.1") != 0) {
+        log_error("Unsupported protocol version.");
+        snprintf(response, sizeof(response),
+                 "HTTP/1.1 505 HTTP Version Not Supported\r\n"
+                 "Content-Type: text/plain\r\n"
+                 "Content-Length: 26\r\n"
+                 "Connection: close\r\n"
+                 "\r\n"
+                 "HTTP Version Not Supported");
+        send(client_socket, response, strlen(response), 0);
+        return;
+    }
+
+    if (strcmp(method, "GET") != 0) {
+        log_error("Unsupported HTTP method.");
+        snprintf(response, sizeof(response),
+                 "HTTP/1.1 405 Method Not Allowed\r\n"
+                 "Content-Type: text/plain\r\n"
+                 "Content-Length: 18\r\n"
+                 "Connection: close\r\n"
+                 "\r\n"
+                 "Method Not Allowed");
+        send(client_socket, response, strlen(response), 0);
+        return;
+    }
+
     log_request(method, url);
 
     if (strcmp(url, "/") == 0) {
@@ -42,7 +80,4 @@ void handle_request(const char *request, SOCKET client_socket) {
     } else {
         serve_static_file(url, client_socket);
     }
-
-    shutdown(client_socket, SD_SEND);
-    closesocket(client_socket);
 }

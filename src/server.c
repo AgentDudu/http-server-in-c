@@ -1,5 +1,6 @@
 #include "server.h"
 #include "router.h"
+#include "logger.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -17,6 +18,15 @@ DWORD WINAPI handle_client(LPVOID client_socket_ptr) {
     if (recv_len > 0) {
         buffer[recv_len] = '\0';
         handle_request(buffer, client_socket);
+    } else if (recv_len == SOCKET_ERROR) {
+        log_error("Error receiving data from client.");
+        const char *error_response = "HTTP/1.1 500 Internal Server Error\r\n"
+                                     "Content-Type: text/plain\r\n"
+                                     "Content-Length: 21\r\n"
+                                     "Connection: close\r\n"
+                                     "\r\n"
+                                     "Internal Server Error";
+        send(client_socket, error_response, strlen(error_response), 0);
     }
 
     shutdown(client_socket, SD_SEND);
@@ -33,12 +43,12 @@ void start_server(int port) {
     int addr_len;
 
     if (WSAStartup(MAKEWORD(2, 2), &wsa) != 0) {
-        printf("Failed. Error Code: %d\n", WSAGetLastError());
+        log_error("WSAStartup failed.");
         exit(EXIT_FAILURE);
     }
 
     if ((server_socket = socket(AF_INET, SOCK_STREAM, 0)) == INVALID_SOCKET) {
-        printf("Could not create socket: %d\n", WSAGetLastError());
+        log_error("Failed to create server socket.");
         WSACleanup();
         exit(EXIT_FAILURE);
     }
@@ -48,7 +58,7 @@ void start_server(int port) {
     server_addr.sin_port = htons(port);
 
     if (bind(server_socket, (struct sockaddr *)&server_addr, sizeof(server_addr)) == SOCKET_ERROR) {
-        printf("Bind failed with error code: %d\n", WSAGetLastError());
+        log_error("Bind failed.");
         closesocket(server_socket);
         WSACleanup();
         exit(EXIT_FAILURE);
@@ -61,15 +71,13 @@ void start_server(int port) {
     while (1) {
         client_socket = accept(server_socket, (struct sockaddr *)&client_addr, &addr_len);
         if (client_socket == INVALID_SOCKET) {
-            printf("Accept failed with error code: %d\n", WSAGetLastError());
+            log_error("Accept failed.");
             continue;
         }
 
-        printf("New client connected.\n");
-
         SOCKET *client_socket_ptr = malloc(sizeof(SOCKET));
         if (client_socket_ptr == NULL) {
-            printf("Memory allocation failed.\n");
+            log_error("Memory allocation failed.");
             closesocket(client_socket);
             continue;
         }
@@ -77,7 +85,7 @@ void start_server(int port) {
 
         HANDLE thread = CreateThread(NULL, 0, handle_client, client_socket_ptr, 0, NULL);
         if (thread == NULL) {
-            printf("Failed to create thread: %d\n", GetLastError());
+            log_error("Failed to create thread.");
             free(client_socket_ptr);
             closesocket(client_socket);
         } else {

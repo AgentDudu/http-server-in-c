@@ -35,5 +35,5 @@ CMakeFiles/http_server.dir/src/server.c.obj: \
  c:\mingw\include\oleauto.h c:\mingw\include\oaidl.h \
  c:\mingw\include\oleidl.h c:\mingw\include\sys\bsdtypes.h \
  c:\mingw\include\sys\time.h c:\mingw\include\nspapi.h \
- c:\mingw\include\wtypes.h c:\mingw\include\stdio.h \
- c:\mingw\include\sys/types.h
+ c:\mingw\include\wtypes.h D:\NeovimProjects\http_server\src\logger.h \
+ c:\mingw\include\stdio.h c:\mingw\include\sys/types.h

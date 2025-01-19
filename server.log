@@ -7,3 +7,21 @@
 [2025-01-18 17:27:43] [INFO] Request: Method=GET, URL=/
 [2025-01-18 17:27:52] [INFO] Request: Method=GET, URL=/about.html
 [2025-01-18 17:27:52] [INFO] Request: Method=GET, URL=/styles.css
+[2025-01-19 10:07:50] [INFO] Request: Method=GET, URL=/
+[2025-01-19 10:07:55] [INFO] Request: Method=GET, URL=/favicon.ico
+[2025-01-19 10:07:55] [ERROR] File not found: static/favicon.ico
+[2025-01-19 10:08:06] [INFO] Request: Method=GET, URL=/favicon.ico
+[2025-01-19 10:08:06] [ERROR] File not found: static/favicon.ico
+[2025-01-19 10:08:19] [INFO] Request: Method=GET, URL=/index.html
+[2025-01-19 10:08:19] [INFO] Request: Method=GET, URL=/styles.css
+[2025-01-19 10:08:22] [INFO] Request: Method=GET, URL=/styles.css
+[2025-01-19 10:08:44] [INFO] Request: Method=GET, URL=/
+[2025-01-19 10:08:51] [INFO] Request: Method=GET, URL=/index.html
+[2025-01-19 10:08:51] [INFO] Request: Method=GET, URL=/styles.css
+[2025-01-19 10:08:56] [INFO] Request: Method=GET, URL=/styles.css
+[2025-01-19 10:09:00] [INFO] Request: Method=GET, URL=/index.html
+[2025-01-19 10:09:00] [INFO] Request: Method=GET, URL=/styles.css
+[2025-01-19 10:09:06] [INFO] Request: Method=GET, URL=/index.html
+[2025-01-19 10:09:06] [INFO] Request: Method=GET, URL=/styles.css
+[2025-01-19 10:09:13] [INFO] Request: Method=GET, URL=/index2.html
+[2025-01-19 10:09:13] [ERROR] File not found: static/index2.html
