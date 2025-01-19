@@ -108,6 +108,7 @@ CMakeFiles/http_server.dir/src/router.c.obj
 
 CMakeFiles/http_server.dir/src/server.c.obj
  D:/NeovimProjects/http_server/src/server.c
+ D:/NeovimProjects/http_server/src/logger.h
  D:/NeovimProjects/http_server/src/router.h
  D:/NeovimProjects/http_server/src/server.h
  C:/MinGW/include/_mingw.h

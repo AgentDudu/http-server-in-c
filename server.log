@@ -25,3 +25,14 @@
 [2025-01-19 10:09:06] [INFO] Request: Method=GET, URL=/styles.css
 [2025-01-19 10:09:13] [INFO] Request: Method=GET, URL=/index2.html
 [2025-01-19 10:09:13] [ERROR] File not found: static/index2.html
+[2025-01-19 10:33:57] [INFO] Request: Method=GET, URL=/
+[2025-01-19 10:34:04] [INFO] Request: Method=GET, URL=/about
+[2025-01-19 10:34:09] [INFO] Request: Method=GET, URL=/index.html
+[2025-01-19 10:34:09] [INFO] Request: Method=GET, URL=/styles.css
+[2025-01-19 10:34:15] [INFO] Request: Method=GET, URL=/user/123
+[2025-01-19 10:34:20] [INFO] Request: Method=GET, URL=/user/abc
+[2025-01-19 10:34:20] [ERROR] Invalid user ID in URL.
+[2025-01-19 10:34:32] [INFO] Request: Method=GET, URL=/user/nonexistent
+[2025-01-19 10:34:32] [ERROR] Invalid user ID in URL.
+[2025-01-19 10:34:40] [INFO] Request: Method=GET, URL=/nonexistent
+[2025-01-19 10:34:40] [ERROR] File not found: static/nonexistent
