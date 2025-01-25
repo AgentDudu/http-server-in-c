@@ -42,3 +42,8 @@
 [2025-01-22 12:29:04] [INFO] Request: Method=GET, URL=/favicon.ico
 [2025-01-22 12:29:04] [ERROR] File not found: static/favicon.ico
 [2025-01-22 12:29:11] [INFO] Request: Method=GET, URL=/styles.css
+[2025-01-25 13:07:06] [INFO] Request: Method=GET, URL=/
+[2025-01-25 13:07:09] [INFO] Request: Method=GET, URL=/secret.txt
+[2025-01-25 13:07:09] [ERROR] File not found: static/secret.txt
+[2025-01-25 13:07:09] [INFO] Request: Method=GET, URL=/favicon.ico
+[2025-01-25 13:07:09] [ERROR] File not found: static/favicon.ico
