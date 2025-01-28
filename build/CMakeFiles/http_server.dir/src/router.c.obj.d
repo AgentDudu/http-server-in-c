@@ -36,5 +36,6 @@ CMakeFiles/http_server.dir/src/router.c.obj: \
  c:\mingw\include\sys\time.h c:\mingw\include\nspapi.h \
  c:\mingw\include\wtypes.h D:\NeovimProjects\http_server\src\logger.h \
  D:\NeovimProjects\http_server\src\request.h \
+ D:\NeovimProjects\http_server\src\session.h \
  D:\NeovimProjects\http_server\src\static_handler.h \
  c:\mingw\include\stdio.h c:\mingw\include\sys/types.h

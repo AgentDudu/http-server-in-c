@@ -32,6 +32,7 @@ CMakeFiles/http_server.dir/src/router.c.obj: D:/NeovimProjects/http_server/src/r
   D:/NeovimProjects/http_server/src/logger.h \
   D:/NeovimProjects/http_server/src/request.h \
   D:/NeovimProjects/http_server/src/router.h \
+  D:/NeovimProjects/http_server/src/session.h \
   D:/NeovimProjects/http_server/src/static_handler.h \
   C:/MinGW/include/_mingw.h \
   C:/MinGW/include/_winsock.h \
@@ -175,6 +176,23 @@ CMakeFiles/http_server.dir/src/server.c.obj: D:/NeovimProjects/http_server/src/s
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/stdarg.h \
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/stddef.h
 
+CMakeFiles/http_server.dir/src/session.c.obj: D:/NeovimProjects/http_server/src/session.c \
+  D:/NeovimProjects/http_server/src/session.h \
+  C:/MinGW/include/_mingw.h \
+  C:/MinGW/include/msvcrtver.h \
+  C:/MinGW/include/sdkddkver.h \
+  C:/MinGW/include/stdio.h \
+  C:/MinGW/include/stdlib.h \
+  C:/MinGW/include/string.h \
+  C:/MinGW/include/strings.h \
+  C:/MinGW/include/sys/types.h \
+  C:/MinGW/include/sys/types.h \
+  C:/MinGW/include/time.h \
+  C:/MinGW/include/w32api.h \
+  C:/MinGW/include/wchar.h \
+  C:/MinGW/lib/gcc/mingw32/6.3.0/include/stdarg.h \
+  C:/MinGW/lib/gcc/mingw32/6.3.0/include/stddef.h
+
 CMakeFiles/http_server.dir/src/static_handler.c.obj: D:/NeovimProjects/http_server/src/static_handler.c \
   D:/NeovimProjects/http_server/src/logger.h \
   D:/NeovimProjects/http_server/src/static_handler.h \
@@ -306,6 +324,8 @@ D:/NeovimProjects/http_server/src/router.h:
 
 C:/MinGW/include/rpcnsi.h:
 
+D:/NeovimProjects/http_server/src/session.h:
+
 D:/NeovimProjects/http_server/src/static_handler.h:
 
 C:/MinGW/include/windef.h:
@@ -374,13 +394,13 @@ C:/MinGW/include/stdlib.h:
 
 C:/MinGW/include/string.h:
 
-C:/MinGW/include/windows.h:
-
 C:/MinGW/include/wchar.h:
 
 C:/MinGW/include/winbase.h:
 
 C:/MinGW/include/wincon.h:
+
+C:/MinGW/include/windows.h:
 
 C:/MinGW/include/winerror.h:
 
@@ -407,6 +427,8 @@ C:/MinGW/include/winver.h:
 C:/MinGW/include/wtypes.h:
 
 D:/NeovimProjects/http_server/src/server.c:
+
+D:/NeovimProjects/http_server/src/session.c:
 
 D:/NeovimProjects/http_server/src/static_handler.c:
 

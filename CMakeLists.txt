@@ -12,6 +12,7 @@ add_executable(http_server
     src/static_handler.c
     src/request.c
     src/logger.c
+    src/session.c
 )
 
 target_link_libraries(http_server ws2_32)

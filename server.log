@@ -47,3 +47,10 @@
 [2025-01-25 13:07:09] [ERROR] File not found: static/secret.txt
 [2025-01-25 13:07:09] [INFO] Request: Method=GET, URL=/favicon.ico
 [2025-01-25 13:07:09] [ERROR] File not found: static/favicon.ico
+[2025-01-28 22:10:28] [INFO] Request: Method=GET, URL=/
+[2025-01-28 22:10:28] [INFO] Request: Method=Cookie detected, URL=<id>
+[2025-01-28 22:11:07] [INFO] Request: Method=GET, URL=/
+[2025-01-28 22:11:07] [INFO] Request: Method=Cookie detected, URL=P1kAlMiG2Kb7FzP5tM1QBI6DSS92c31Apgjk
+[2025-01-28 22:17:22] [INFO] Request: Method=GET, URL=/
+[2025-01-28 22:17:44] [INFO] Request: Method=GET, URL=/
+[2025-01-28 22:17:44] [INFO] Request: Method=Cookie detected, URL=P1kAlMiG2Kb7FzP5tM1QBI6DSS92c31Apgjk

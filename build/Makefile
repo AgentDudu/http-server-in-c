@@ -248,6 +248,30 @@ src/server.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\http_server.dir\build.make CMakeFiles/http_server.dir/src/server.c.s
 .PHONY : src/server.c.s
 
+src/session.obj: src/session.c.obj
+.PHONY : src/session.obj
+
+# target to build an object file
+src/session.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\http_server.dir\build.make CMakeFiles/http_server.dir/src/session.c.obj
+.PHONY : src/session.c.obj
+
+src/session.i: src/session.c.i
+.PHONY : src/session.i
+
+# target to preprocess a source file
+src/session.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\http_server.dir\build.make CMakeFiles/http_server.dir/src/session.c.i
+.PHONY : src/session.c.i
+
+src/session.s: src/session.c.s
+.PHONY : src/session.s
+
+# target to generate assembly for a file
+src/session.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\http_server.dir\build.make CMakeFiles/http_server.dir/src/session.c.s
+.PHONY : src/session.c.s
+
 src/static_handler.obj: src/static_handler.c.obj
 .PHONY : src/static_handler.obj
 
@@ -296,6 +320,9 @@ help:
 	@echo ... src/server.obj
 	@echo ... src/server.i
 	@echo ... src/server.s
+	@echo ... src/session.obj
+	@echo ... src/session.i
+	@echo ... src/session.s
 	@echo ... src/static_handler.obj
 	@echo ... src/static_handler.i
 	@echo ... src/static_handler.s
