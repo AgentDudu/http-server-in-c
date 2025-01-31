@@ -1,7 +1,8 @@
-CMakeFiles/http_server.dir/src/router.c.obj: \
- D:\NeovimProjects\http_server\src\router.c \
- D:\NeovimProjects\http_server\src\router.h c:\mingw\include\winsock2.h \
- c:\mingw\include\winsock.h c:\mingw\include\windows.h \
+CMakeFiles/http_server.dir/src/response_handler.c.obj: \
+ D:\NeovimProjects\http_server\src\response_handler.c \
+ D:\NeovimProjects\http_server\src\response_handler.h \
+ c:\mingw\include\winsock2.h c:\mingw\include\winsock.h \
+ c:\mingw\include\windows.h \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\stdarg.h \
  c:\mingw\include\windef.h c:\mingw\include\w32api.h \
  c:\mingw\include\sdkddkver.h c:\mingw\include\winnt.h \
@@ -34,11 +35,5 @@ CMakeFiles/http_server.dir/src/router.c.obj: \
  c:\mingw\include\oleauto.h c:\mingw\include\oaidl.h \
  c:\mingw\include\oleidl.h c:\mingw\include\sys\bsdtypes.h \
  c:\mingw\include\sys\time.h c:\mingw\include\nspapi.h \
- c:\mingw\include\wtypes.h \
- D:\NeovimProjects\http_server\src\content_negotiation.h \
- D:\NeovimProjects\http_server\src\logger.h \
- D:\NeovimProjects\http_server\src\method_handler.h \
- D:\NeovimProjects\http_server\src\request.h \
- D:\NeovimProjects\http_server\src\session.h \
- D:\NeovimProjects\http_server\src\static_handler.h \
- c:\mingw\include\stdio.h c:\mingw\include\sys/types.h
+ c:\mingw\include\wtypes.h c:\mingw\include\stdio.h \
+ c:\mingw\include\sys/types.h

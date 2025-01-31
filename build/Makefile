@@ -200,6 +200,30 @@ src/main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\http_server.dir\build.make CMakeFiles/http_server.dir/src/main.c.s
 .PHONY : src/main.c.s
 
+src/method_handler.obj: src/method_handler.c.obj
+.PHONY : src/method_handler.obj
+
+# target to build an object file
+src/method_handler.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\http_server.dir\build.make CMakeFiles/http_server.dir/src/method_handler.c.obj
+.PHONY : src/method_handler.c.obj
+
+src/method_handler.i: src/method_handler.c.i
+.PHONY : src/method_handler.i
+
+# target to preprocess a source file
+src/method_handler.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\http_server.dir\build.make CMakeFiles/http_server.dir/src/method_handler.c.i
+.PHONY : src/method_handler.c.i
+
+src/method_handler.s: src/method_handler.c.s
+.PHONY : src/method_handler.s
+
+# target to generate assembly for a file
+src/method_handler.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\http_server.dir\build.make CMakeFiles/http_server.dir/src/method_handler.c.s
+.PHONY : src/method_handler.c.s
+
 src/request.obj: src/request.c.obj
 .PHONY : src/request.obj
 
@@ -223,6 +247,30 @@ src/request.s: src/request.c.s
 src/request.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\http_server.dir\build.make CMakeFiles/http_server.dir/src/request.c.s
 .PHONY : src/request.c.s
+
+src/response_handler.obj: src/response_handler.c.obj
+.PHONY : src/response_handler.obj
+
+# target to build an object file
+src/response_handler.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\http_server.dir\build.make CMakeFiles/http_server.dir/src/response_handler.c.obj
+.PHONY : src/response_handler.c.obj
+
+src/response_handler.i: src/response_handler.c.i
+.PHONY : src/response_handler.i
+
+# target to preprocess a source file
+src/response_handler.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\http_server.dir\build.make CMakeFiles/http_server.dir/src/response_handler.c.i
+.PHONY : src/response_handler.c.i
+
+src/response_handler.s: src/response_handler.c.s
+.PHONY : src/response_handler.s
+
+# target to generate assembly for a file
+src/response_handler.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\http_server.dir\build.make CMakeFiles/http_server.dir/src/response_handler.c.s
+.PHONY : src/response_handler.c.s
 
 src/router.obj: src/router.c.obj
 .PHONY : src/router.obj
@@ -338,9 +386,15 @@ help:
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s
+	@echo ... src/method_handler.obj
+	@echo ... src/method_handler.i
+	@echo ... src/method_handler.s
 	@echo ... src/request.obj
 	@echo ... src/request.i
 	@echo ... src/request.s
+	@echo ... src/response_handler.obj
+	@echo ... src/response_handler.i
+	@echo ... src/response_handler.s
 	@echo ... src/router.obj
 	@echo ... src/router.i
 	@echo ... src/router.s

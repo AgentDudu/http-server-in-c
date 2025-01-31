@@ -60,3 +60,20 @@ const char *get_best_content_type(const char *accept_header) {
 
   return "text/html";
 }
+
+void format_response(char *body, size_t size, const char *content_type,
+                     const char *session_id) {
+  if (strcmp(content_type, "application/json") == 0) {
+    snprintf(body, size, "{ \"message\": \"Hello\", \"session_id\": \"%s\" }",
+             session_id);
+  } else if (strcmp(content_type, "application/xml") == 0) {
+    snprintf(body, size,
+             "<response><message>Hello</message><session_id>%s</session_id></"
+             "response>",
+             session_id);
+  } else {
+    snprintf(body, size,
+             "<html><body><h1>Hello</h1><p>Session ID: %s</p></body></html>",
+             session_id);
+  }
+}

@@ -191,6 +191,36 @@ CMakeFiles/http_server.dir/src/content_negotiation.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/http_server.dir/src/content_negotiation.c.s"
 	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\NeovimProjects\http_server\src\content_negotiation.c -o CMakeFiles\http_server.dir\src\content_negotiation.c.s
 
+CMakeFiles/http_server.dir/src/method_handler.c.obj: CMakeFiles/http_server.dir/flags.make
+CMakeFiles/http_server.dir/src/method_handler.c.obj: CMakeFiles/http_server.dir/includes_C.rsp
+CMakeFiles/http_server.dir/src/method_handler.c.obj: D:/NeovimProjects/http_server/src/method_handler.c
+CMakeFiles/http_server.dir/src/method_handler.c.obj: CMakeFiles/http_server.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\NeovimProjects\http_server\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/http_server.dir/src/method_handler.c.obj"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/http_server.dir/src/method_handler.c.obj -MF CMakeFiles\http_server.dir\src\method_handler.c.obj.d -o CMakeFiles\http_server.dir\src\method_handler.c.obj -c D:\NeovimProjects\http_server\src\method_handler.c
+
+CMakeFiles/http_server.dir/src/method_handler.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/http_server.dir/src/method_handler.c.i"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\NeovimProjects\http_server\src\method_handler.c > CMakeFiles\http_server.dir\src\method_handler.c.i
+
+CMakeFiles/http_server.dir/src/method_handler.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/http_server.dir/src/method_handler.c.s"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\NeovimProjects\http_server\src\method_handler.c -o CMakeFiles\http_server.dir\src\method_handler.c.s
+
+CMakeFiles/http_server.dir/src/response_handler.c.obj: CMakeFiles/http_server.dir/flags.make
+CMakeFiles/http_server.dir/src/response_handler.c.obj: CMakeFiles/http_server.dir/includes_C.rsp
+CMakeFiles/http_server.dir/src/response_handler.c.obj: D:/NeovimProjects/http_server/src/response_handler.c
+CMakeFiles/http_server.dir/src/response_handler.c.obj: CMakeFiles/http_server.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\NeovimProjects\http_server\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/http_server.dir/src/response_handler.c.obj"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/http_server.dir/src/response_handler.c.obj -MF CMakeFiles\http_server.dir\src\response_handler.c.obj.d -o CMakeFiles\http_server.dir\src\response_handler.c.obj -c D:\NeovimProjects\http_server\src\response_handler.c
+
+CMakeFiles/http_server.dir/src/response_handler.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/http_server.dir/src/response_handler.c.i"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\NeovimProjects\http_server\src\response_handler.c > CMakeFiles\http_server.dir\src\response_handler.c.i
+
+CMakeFiles/http_server.dir/src/response_handler.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/http_server.dir/src/response_handler.c.s"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\NeovimProjects\http_server\src\response_handler.c -o CMakeFiles\http_server.dir\src\response_handler.c.s
+
 # Object files for target http_server
 http_server_OBJECTS = \
 "CMakeFiles/http_server.dir/src/main.c.obj" \
@@ -200,7 +230,9 @@ http_server_OBJECTS = \
 "CMakeFiles/http_server.dir/src/request.c.obj" \
 "CMakeFiles/http_server.dir/src/logger.c.obj" \
 "CMakeFiles/http_server.dir/src/session.c.obj" \
-"CMakeFiles/http_server.dir/src/content_negotiation.c.obj"
+"CMakeFiles/http_server.dir/src/content_negotiation.c.obj" \
+"CMakeFiles/http_server.dir/src/method_handler.c.obj" \
+"CMakeFiles/http_server.dir/src/response_handler.c.obj"
 
 # External object files for target http_server
 http_server_EXTERNAL_OBJECTS =
@@ -213,11 +245,13 @@ http_server.exe: CMakeFiles/http_server.dir/src/request.c.obj
 http_server.exe: CMakeFiles/http_server.dir/src/logger.c.obj
 http_server.exe: CMakeFiles/http_server.dir/src/session.c.obj
 http_server.exe: CMakeFiles/http_server.dir/src/content_negotiation.c.obj
+http_server.exe: CMakeFiles/http_server.dir/src/method_handler.c.obj
+http_server.exe: CMakeFiles/http_server.dir/src/response_handler.c.obj
 http_server.exe: CMakeFiles/http_server.dir/build.make
 http_server.exe: CMakeFiles/http_server.dir/linkLibs.rsp
 http_server.exe: CMakeFiles/http_server.dir/objects1.rsp
 http_server.exe: CMakeFiles/http_server.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=D:\NeovimProjects\http_server\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking C executable http_server.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=D:\NeovimProjects\http_server\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking C executable http_server.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\http_server.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
