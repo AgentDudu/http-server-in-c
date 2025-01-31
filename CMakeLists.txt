@@ -13,6 +13,7 @@ add_executable(http_server
     src/request.c
     src/logger.c
     src/session.c
+    src/content_negotiation.c
 )
 
 target_link_libraries(http_server ws2_32)

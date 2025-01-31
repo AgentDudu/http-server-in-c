@@ -128,6 +128,30 @@ http_server/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\http_server.dir\build.make CMakeFiles/http_server.dir/build
 .PHONY : http_server/fast
 
+src/content_negotiation.obj: src/content_negotiation.c.obj
+.PHONY : src/content_negotiation.obj
+
+# target to build an object file
+src/content_negotiation.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\http_server.dir\build.make CMakeFiles/http_server.dir/src/content_negotiation.c.obj
+.PHONY : src/content_negotiation.c.obj
+
+src/content_negotiation.i: src/content_negotiation.c.i
+.PHONY : src/content_negotiation.i
+
+# target to preprocess a source file
+src/content_negotiation.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\http_server.dir\build.make CMakeFiles/http_server.dir/src/content_negotiation.c.i
+.PHONY : src/content_negotiation.c.i
+
+src/content_negotiation.s: src/content_negotiation.c.s
+.PHONY : src/content_negotiation.s
+
+# target to generate assembly for a file
+src/content_negotiation.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\http_server.dir\build.make CMakeFiles/http_server.dir/src/content_negotiation.c.s
+.PHONY : src/content_negotiation.c.s
+
 src/logger.obj: src/logger.c.obj
 .PHONY : src/logger.obj
 
@@ -305,6 +329,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... http_server
+	@echo ... src/content_negotiation.obj
+	@echo ... src/content_negotiation.i
+	@echo ... src/content_negotiation.s
 	@echo ... src/logger.obj
 	@echo ... src/logger.i
 	@echo ... src/logger.s

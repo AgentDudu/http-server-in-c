@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "D:/NeovimProjects/http_server/src/content_negotiation.c" "CMakeFiles/http_server.dir/src/content_negotiation.c.obj" "gcc" "CMakeFiles/http_server.dir/src/content_negotiation.c.obj.d"
   "D:/NeovimProjects/http_server/src/logger.c" "CMakeFiles/http_server.dir/src/logger.c.obj" "gcc" "CMakeFiles/http_server.dir/src/logger.c.obj.d"
   "D:/NeovimProjects/http_server/src/main.c" "CMakeFiles/http_server.dir/src/main.c.obj" "gcc" "CMakeFiles/http_server.dir/src/main.c.obj.d"
   "D:/NeovimProjects/http_server/src/request.c" "CMakeFiles/http_server.dir/src/request.c.obj" "gcc" "CMakeFiles/http_server.dir/src/request.c.obj.d"
