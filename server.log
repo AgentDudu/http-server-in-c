@@ -77,3 +77,6 @@
 [2025-01-31 19:03:16] [INFO] Request: Method=PUT, URL=/resource
 [2025-01-31 19:03:26] [INFO] Request: Method=DELETE, URL=/resource
 [2025-01-31 19:03:31] [INFO] Request: Method=PATCH, URL=/resource
+[2025-01-31 20:10:15] [INFO] Request: Method=GET, URL=/, IP=127.0.0.1, Duration=0.000ms
+[2025-01-31 20:10:24] [INFO] Request: Method=GET, URL=/, IP=127.0.0.1, Duration=2.000ms
+[2025-01-31 20:10:34] [INFO] Request: Method=POST, URL=/resource, IP=127.0.0.1, Duration=2.000ms
